@@ -47,7 +47,7 @@ module.exports = merge(commonConfig, {
       comments: false
     }),
     new webpack.optimize.CommonsChunkPlugin({
-     name: ['manifest'],
+      name: ['manifest'],
     }),
     new webpack.HashedModuleIdsPlugin(),
     new webpackChunkHash(),
@@ -55,7 +55,7 @@ module.exports = merge(commonConfig, {
       filename: 'chunk-manifest.json',
       manifestVariable: 'webpackManifest',
       inlineManifest: true
-   }),
-   new extractTextPlugin('[name].scss')
+    }),
+   new extractTextPlugin('[name].css')
   ]
 })
