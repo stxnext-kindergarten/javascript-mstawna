@@ -1,7 +1,4 @@
-import './styles.css';
-import b from './b';
-
-b();
+import './styles.scss';
 
 if (module.hot) {
   module.hot.accept(function(err) {
