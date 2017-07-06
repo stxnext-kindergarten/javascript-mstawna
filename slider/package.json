@@ -2,11 +2,10 @@
   "name": "slider",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build:dev": "node dev.server.js",
-    "build:prod": "webpack --env=prod --progress --profile --colors"
+    "dev": "webpack-dev-server --config=webpack.dev.js --hot",
+    "prod": "webpack --env=prod --progress --profile --colors"
   },
   "author": "",
   "license": "ISC",

@@ -8,13 +8,11 @@ header {
   background-color: #808080;
 }
 
-//images styles
-
 .images {
   background-color: red;
 }
 
 
 body {
-  background: red;
+  /*background: red;*/
 }

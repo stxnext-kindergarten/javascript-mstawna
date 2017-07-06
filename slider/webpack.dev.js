@@ -5,40 +5,31 @@ var WebpackNotifierPlugin = require('webpack-notifier');
 
 
 module.exports = {
-
   entry: './src/app.js',
 
   output: {
     path: path.join(__dirname, 'build'),
-    filename: 'bundle.js'
+    filename: '[name].js'
   },
-
-  watch: true,
 
   module: {
     rules: [
       {
         test: /\.jsx?$/,
-        loader: "babel-loader",
+        loader: 'babel-loader',
         exclude: /(node_modules)/,
         options: {
-          presets: ["es2015"]
+          presets: ['es2015']
         },
       },
       {
-         test: /\.css$/,
-         use: [
-           'style-loader',
-           'css-loader'
-         ]
-       },
-       {
-          test: /\.scss$/,
-          use: [
-            'style-loader',
-            'sass-loader'
-          ]
-        }
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader']
+      },
+      {
+        test: /\.scss$/,
+        use: ['style-loader', 'sass-loader']
+      }
     ]
   },
 
