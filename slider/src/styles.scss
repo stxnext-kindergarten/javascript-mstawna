@@ -1,13 +1,144 @@
-header {
-  width: 300px;
-  font-size: 30px;
-  color: #fff;
-  text-align: center;
-  margin: 20px auto;
-  padding: 10px 0;
-  background-color: #808080;
+.container {
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+
+  header {
+    width: 300px;
+    font-size: 30px;
+    margin:auto;
+    color: #fff;
+    text-align: center;
+    margin: 20px auto;
+    padding: 10px 0;
+    background-color: #808080;
+  }
 }
 
-.images {
-  background-color: red;
+
+//Slider
+
+.slider {
+
+  &__content {
+    width: 800px;
+    background-color: #000;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    position: relative;
+  }
+
+  &__image {
+    height: 250px;
+    width: 800px;
+
+    img {
+      height: 250px;
+      width: 800px;
+      border-radius: 2%;
+      border: 1px solid #808080;
+     }
+   }
+
+  &__arrow {
+    position: absolute;
+    display: flex;
+    bottom: 50%;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+
+    &::before, &::after {
+      content:'';
+      position: absolute;
+      background-color: #fff;
+    }
+
+    &::before {
+      top: 15px;
+      left: 10px;
+      height: 3px;
+      width: 28px;
+      transform: rotate(60deg);
+    }
+
+    &::after {
+      top: 26px;
+      left: 22px;
+      height: 28px;
+      width: 3px;
+      transform: rotate(30deg);
+    }
+  }
+
+  &__arrow--left {
+    left: 10%;
+    transform: rotate(180deg);
+
+    &:active {
+      transform: rotate(180deg) translateY(4px);
+    }
+  }
+
+  &__arrow--right {
+    right: 10%;
+
+    &:active {
+      transform: translateY(4px);
+    }
+  }
+
+  nav {
+    margin: auto;
+    width: 600px;
+
+    ul {
+      list-style-type: none;
+      display: flex;
+      justify-content: space-between;
+
+      li {
+        width: 150px;
+        text-align: center;
+        padding: 6px;
+        color: #fff;
+        letter-spacing: 2px;
+        text-decoration: underline;
+        position: relative;
+
+        &:hover {
+          text-decoration: none;
+          font-weight: bold;
+
+          &::before, &::after {
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-color: transparent;
+            border-top: 0;
+            content: '';
+          }
+
+          &::before {
+            bottom: 43px;
+            left: 32px;
+            border-bottom-color: #808080;
+            border-width: 16px;
+          }
+
+          &::after {
+            bottom: 42px;
+            left: 33px;
+            border-bottom-color: #000;
+            border-width: 15px;
+         }
+        }
+      }
+    }
+  }
 }
