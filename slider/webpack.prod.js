@@ -56,6 +56,6 @@ module.exports = merge(commonConfig, {
       manifestVariable: 'webpackManifest',
       inlineManifest: true
     }),
-   new extractTextPlugin('[name].css')
+    new extractTextPlugin('[name].css')
   ]
 })

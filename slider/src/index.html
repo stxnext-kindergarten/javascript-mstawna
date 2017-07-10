@@ -7,11 +7,25 @@
   <body>
     <div class="container">
       <header>Slider</header>
-        <div class="content">
-          <div class="images">
+
+      <div class="slider">
+        <div class="slider__content">
+
+          <div class="slider__image">
               <img src="./img/image1.jpg"/>
           </div>
+
+          <div class="slider__arrow slider__arrow--right"></div>
+          <div class="slider__arrow slider__arrow--left"></div>
+
+            <ul class="slider__nav">
+              <li class="slider__nav__item">Zdjecie 1</li>
+              <li class="slider__nav__item">Zdjecie 2</li>
+              <li class="slider__nav__item">Zdjecie 3</li>
+            </ul>
+
         </div>
+      </div>
       <footer></footer>
     </div>
     <%= htmlWebpackPlugin.files.webpackManifest %>
